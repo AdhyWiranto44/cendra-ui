@@ -8,29 +8,307 @@
 </head>
 <body class="bg-slate-800 flex">
   <div class="container-fluid">
-    <div id="cendra-sidebar" class="p-4 border-r h-screen border-slate-600 overflow-y-auto flex-col justify-end">
-      <a class="text-2xl" href="#">
-        <i class="fa-solid fa-feather-pointed mb-3 duration-300 hover:text-sky-500"></i>
+    <div id="cendra-sidebar" class="pt-4 border-r h-screen border-slate-600 overflow-y-auto flex-col justify-start">
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Main">
+        <i class="fa-solid fa-feather-pointed"></i>
       </a>
-      <a class="text-2xl flex align-middle" href="#" title="Home">
-        <i class="fa-solid fa-house mb-3 duration-300 hover:text-sky-500"></i>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Home">
+        <i class="fa-solid fa-house lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Home</h2>
       </a>
-      <a class="text-2xl" href="#" title="Profile">
-        <i class="fa-solid fa-user-large mb-3 duration-300 hover:text-sky-500"></i>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Explore">
+        <i class="fa-solid fa-magnifying-glass lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Explore</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Notification">
+        <i class="fa-solid fa-bell lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Notification</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Messages">
+        <i class="fa-solid fa-envelope lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Messages</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Bookmarks">
+        <i class="fa-solid fa-bookmark lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Bookmarks</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Lists">
+        <i class="fa-solid fa-list lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Lists</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Profile">
+        <i class="fa-solid fa-user-large lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Profile</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="More">
+        <i class="fa-solid fa-ellipsis lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">More</h2>
+      </a>
+      <a class="mx-4 lg:mx-14 flex mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="More">
+        <div id="user-photo-profile" class="w-14 lg:mr-3">
+          <img class="rounded-full" src="/src/img/momo.jpg" alt="momo">
+        </div>
+        <div class="flex-col">
+          <p class="hidden lg:block">Hirai Momo</p>
+          <p class="hidden lg:block text-gray-400 mr-1">@dahyuneee</p>
+        </div>
       </a>
     </div>
   </div>
   <div class="container-fluid h-screen overflow-y-auto">
-    <div id="cendra-title" class="mx-4 mt-4">
-      <h1 class="font-bold">Home</h1>
+    <div id="cendra-title" class="p-4 fixed bg-slate-800 w-full">
+      <h1 class="font-bold text-xl">Home</h1>
     </div>
-    <div id="cendra-tweet-input" class="m-4 border border-slate-600 p-2 rounded-md">
+    <div id="cendra-tweet-input" class="mt-16 m-4 border border-slate-600 p-4 rounded-md flex">
+      <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+        <img class="rounded-full" src="/src/img/momo.jpg" alt="momo">
+      </div>
       <form class="w-full">
-        <input class="bg-slate-800 block w-full mb-4 text-white" type="text" name="tweet" placeholder="What's happening?">
-        <button class="block bg-sky-500 duration-300 hover:bg-sky-600 px-4 py-2 rounded-lg text-sky-50 font-semibold ml-auto" type="button">Tweet</button>
+        <textarea class="bg-slate-800 block w-full mb-4 text-white" type="text" name="tweet" placeholder="What's happening?"></textarea>
+        <button class="block bg-sky-500 duration-300 hover:bg-sky-600 px-4 py-2 rounded-full text-sky-50 font-semibold ml-auto" type="button">Tweet</button>
       </form>
     </div>
     <div id="tweet-list" class="m-4">
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/dahyun.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Kim Dahyun</p>
+            </a>
+            <p class="text-gray-400 mr-1">@dahyuneee</p>
+            <p class="text-gray-400">· 1h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis quidem debitis dolorem repudiandae a pariatur repellat. Vitae fugiat porro sed iusto, officiis id recusandae? Possimus nulla, veniam saepe eos perferendis excepturi expedita quidem totam animi a velit delectus cumque mollitia? Debitis deleniti ipsa incidunt, consequuntur iure itaque dolorem eum iste.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-comment"></i> 44</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-retweet"></i> 456</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-heart"></i> 123</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-share-nodes"></i></button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/mina.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Myoui Mina</p>
+            </a>
+            <p class="text-gray-400 mr-1">@mina_sr_my</p>
+            <p class="text-gray-400">· 2h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-comment"></i> 44</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-retweet"></i> 456</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-heart"></i> 123</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-share-nodes"></i></button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/dahyun.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Kim Dahyun</p>
+            </a>
+            <p class="text-gray-400 mr-1">@dahyuneee</p>
+            <p class="text-gray-400">· 1h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis quidem debitis dolorem repudiandae a pariatur repellat. Vitae fugiat porro sed iusto, officiis id recusandae? Possimus nulla, veniam saepe eos perferendis excepturi expedita quidem totam animi a velit delectus cumque mollitia? Debitis deleniti ipsa incidunt, consequuntur iure itaque dolorem eum iste.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-comment"></i> 44</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-retweet"></i> 456</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-heart"></i> 123</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-share-nodes"></i></button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/mina.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Myoui Mina</p>
+            </a>
+            <p class="text-gray-400 mr-1">@mina_sr_my</p>
+            <p class="text-gray-400">· 2h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-comment"></i> 44</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-retweet"></i> 456</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-heart"></i> 123</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-share-nodes"></i></button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/dahyun.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Kim Dahyun</p>
+            </a>
+            <p class="text-gray-400 mr-1">@dahyuneee</p>
+            <p class="text-gray-400">· 1h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis quidem debitis dolorem repudiandae a pariatur repellat. Vitae fugiat porro sed iusto, officiis id recusandae? Possimus nulla, veniam saepe eos perferendis excepturi expedita quidem totam animi a velit delectus cumque mollitia? Debitis deleniti ipsa incidunt, consequuntur iure itaque dolorem eum iste.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-comment"></i> 44</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-retweet"></i> 456</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-heart"></i> 123</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-share-nodes"></i></button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/mina.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Myoui Mina</p>
+            </a>
+            <p class="text-gray-400 mr-1">@mina_sr_my</p>
+            <p class="text-gray-400">· 2h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-comment"></i> 44</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-retweet"></i> 456</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-heart"></i> 123</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-share-nodes"></i></button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/dahyun.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Kim Dahyun</p>
+            </a>
+            <p class="text-gray-400 mr-1">@dahyuneee</p>
+            <p class="text-gray-400">· 1h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis quidem debitis dolorem repudiandae a pariatur repellat. Vitae fugiat porro sed iusto, officiis id recusandae? Possimus nulla, veniam saepe eos perferendis excepturi expedita quidem totam animi a velit delectus cumque mollitia? Debitis deleniti ipsa incidunt, consequuntur iure itaque dolorem eum iste.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-comment"></i> 44</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-retweet"></i> 456</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-heart"></i> 123</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-share-nodes"></i></button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/mina.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Myoui Mina</p>
+            </a>
+            <p class="text-gray-400 mr-1">@mina_sr_my</p>
+            <p class="text-gray-400">· 2h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-comment"></i> 44</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-retweet"></i> 456</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-heart"></i> 123</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-share-nodes"></i></button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/dahyun.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Kim Dahyun</p>
+            </a>
+            <p class="text-gray-400 mr-1">@dahyuneee</p>
+            <p class="text-gray-400">· 1h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis quidem debitis dolorem repudiandae a pariatur repellat. Vitae fugiat porro sed iusto, officiis id recusandae? Possimus nulla, veniam saepe eos perferendis excepturi expedita quidem totam animi a velit delectus cumque mollitia? Debitis deleniti ipsa incidunt, consequuntur iure itaque dolorem eum iste.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-comment"></i> 44</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-retweet"></i> 456</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-heart"></i> 123</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-share-nodes"></i></button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/mina.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Myoui Mina</p>
+            </a>
+            <p class="text-gray-400 mr-1">@mina_sr_my</p>
+            <p class="text-gray-400">· 2h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-comment"></i> 44</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-retweet"></i> 456</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-heart"></i> 123</button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-share-nodes"></i></button>
+            <button class="text-gray-400 duration-300 hover:text-sky-500"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
       <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
         <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
           <img class="rounded-full" src="/src/img/dahyun.jpg" alt="dahyun">
