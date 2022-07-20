@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-slate-800 flex">
+  <div class="container-fluid">
+    <div id="cendra-sidebar" class="pt-4 border-r h-screen border-slate-600 overflow-y-auto flex-col justify-start">
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Main">
+        <i class="fa-solid fa-feather-pointed"></i>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Home">
+        <i class="fa-solid fa-house lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Home</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Explore">
+        <i class="fa-solid fa-magnifying-glass lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Explore</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Notification">
+        <i class="fa-solid fa-bell lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Notification</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Messages">
+        <i class="fa-solid fa-envelope lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Messages</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Bookmarks">
+        <i class="fa-solid fa-bookmark lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Bookmarks</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Lists">
+        <i class="fa-solid fa-list lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Lists</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="Profile">
+        <i class="fa-solid fa-user-large lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">Profile</h2>
+      </a>
+      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="More">
+        <i class="fa-solid fa-ellipsis lg:pr-4"></i>
+        <h2 class="text-xl hidden lg:block">More</h2>
+      </a>
+      <a class="mx-4 lg:mx-14 flex mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="More">
+        <div id="user-photo-profile" class="w-14 lg:mr-3">
+          <img class="rounded-full" src="/src/img/momo.jpg" alt="momo">
+        </div>
+        <div class="flex-col">
+          <p class="hidden lg:block">Hirai Momo</p>
+          <p class="hidden lg:block text-gray-400 mr-1">@dahyuneee</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="container-fluid h-screen overflow-y-auto">
+    <div id="cendra-header" class="flex p-4 bg-slate-800 w-full fixed items-center">
+      <a href="#" class="ml-2 mr-8 p-2 duration-300 hover:bg-slate-700 rounded-full">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <div id="cendra-title">
+        <h1 class="font-bold text-xl">Hirai Momo</h1>
+        <p class="text-sm text-gray-400 mr-1">123 Tweets</p>
+      </div>
+    </div>
+    <div id="cendra-tweet-input" class="mt-24 m-4 border border-slate-600 p-4 rounded-md flex">
+      <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+        <img class="rounded-full" src="/src/img/momo.jpg" alt="momo">
+      </div>
+      <form class="w-full">
+        <textarea class="bg-slate-800 block w-full mb-4 text-white focus:outline-none" type="text" name="tweet" placeholder="What's happening?"></textarea>
+        <button class="block bg-sky-500 duration-300 hover:bg-sky-600 px-4 py-2 rounded-full text-sky-50 font-semibold ml-auto" type="button">Tweet</button>
+      </form>
+    </div>
+    <div id="tweet-list" class="m-4">
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/dahyun.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Kim Dahyun</p>
+            </a>
+            <p class="text-gray-400 mr-1">@dahyuneee</p>
+            <p class="text-gray-400">· 1h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis quidem debitis dolorem repudiandae a pariatur repellat. Vitae fugiat porro sed iusto, officiis id recusandae? Possimus nulla, veniam saepe eos perferendis excepturi expedita quidem totam animi a velit delectus cumque mollitia? Debitis deleniti ipsa incidunt, consequuntur iure itaque dolorem eum iste.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button><i class="fa-solid fa-comment text-gray-400 duration-300 hover:text-sky-500 p-3 rounded-full hover:bg-slate-700"><span class="font-sans font-normal pl-4">44</span></i></button>
+            <button><i class="fa-solid fa-retweet text-gray-400 duration-300 hover:text-green-500 p-3 rounded-full hover:bg-slate-700"><span class="font-sans font-normal pl-4">456</span></i></button>
+            <button><i class="fa-solid fa-heart text-gray-400 duration-300 hover:text-red-500 p-3 rounded-full hover:bg-slate-700"><span class="font-sans font-normal pl-4">456</span></i></button>
+            <button><i class="fa-solid fa-share-nodes text-gray-400 duration-300 hover:text-sky-500 p-3 rounded-full hover:bg-slate-700"></i></button>
+            <button><i class="fa-solid fa-trash-can text-gray-400 duration-300 hover:text-sky-500 p-3 rounded-full hover:bg-slate-700"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
+        <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+          <img class="rounded-full" src="/src/img/mina.jpg" alt="dahyun">
+        </div>
+        <div id="tweet-info" class="w-full">
+          <div id="user-name" class="flex">
+            <a href="#">
+              <p class="font-semibold hover:underline mr-1">Myoui Mina</p>
+            </a>
+            <p class="text-gray-400 mr-1">@mina_sr_my</p>
+            <p class="text-gray-400">· 2h</p>
+          </div>
+          <div id="tweet-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div id="tweet-menu" class="flex justify-between pt-2">
+            <button><i class="fa-solid fa-comment text-gray-400 duration-300 hover:text-sky-500 p-3 rounded-full hover:bg-slate-700"><span class="font-sans font-normal pl-4">44</span></i></button>
+            <button><i class="fa-solid fa-retweet text-gray-400 duration-300 hover:text-green-500 p-3 rounded-full hover:bg-slate-700"><span class="font-sans font-normal pl-4">456</span></i></button>
+            <button><i class="fa-solid fa-heart text-gray-400 duration-300 hover:text-red-500 p-3 rounded-full hover:bg-slate-700"><span class="font-sans font-normal pl-4">456</span></i></button>
+            <button><i class="fa-solid fa-share-nodes text-gray-400 duration-300 hover:text-sky-500 p-3 rounded-full hover:bg-slate-700"></i></button>
+            <button><i class="fa-solid fa-trash-can text-gray-400 duration-300 hover:text-sky-500 p-3 rounded-full hover:bg-slate-700"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
