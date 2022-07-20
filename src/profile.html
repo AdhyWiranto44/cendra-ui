@@ -55,8 +55,8 @@
       </a>
     </div>
   </div>
-  <div class="container-fluid h-screen overflow-y-auto">
-    <div id="cendra-header" class="flex p-4 bg-slate-800 w-full fixed items-center">
+  <div class="container-fluid h-screen overflow-y-auto lg:w-6/12">
+    <div id="cendra-header" class="flex p-4 bg-slate-800 w-full fixed items-center z-10">
       <a href="#" class="ml-2 mr-8 p-2 duration-300 hover:bg-slate-700 rounded-full">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
@@ -65,14 +65,22 @@
         <p class="text-sm text-gray-400 mr-1">123 Tweets</p>
       </div>
     </div>
-    <div id="cendra-tweet-input" class="mt-24 m-4 border border-slate-600 p-4 rounded-md flex">
-      <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
-        <img class="rounded-full" src="/src/img/momo.jpg" alt="momo">
+    <div id="cendra-user-profile" class="mt-20 flex-col border-b border-slate-600">
+      <div id="user-background">
+        <img class="w-screen h-52" src="/src/img/background.jpg" alt="User Background">
       </div>
-      <form class="w-full">
-        <textarea class="bg-slate-800 block w-full mb-4 text-white focus:outline-none" type="text" name="tweet" placeholder="What's happening?"></textarea>
-        <button class="block bg-sky-500 duration-300 hover:bg-sky-600 px-4 py-2 rounded-full text-sky-50 font-semibold ml-auto" type="button">Tweet</button>
-      </form>
+      <div id="user-photo-profile" class="w-32 flex-shrink-0 mx-4 -mt-16">
+        <img class="rounded-full relative border-4 border-slate-800" src="/src/img/momo.jpg" alt="momo">
+      </div>
+      <div class="flex-col m-4">
+        <p class="font-bold text-xl">Hirai Momo</p>
+        <p class="text-gray-400 mr-1">@momo</p>
+        <p class="my-3">Born to be idol :3</p>
+      </div>
+      <div id="user-follow-info" class="flex m-4">
+        <p class="text-gray-400 mr-4"><span class="text-white font-bold">50</span> Following</p>
+        <p class="text-gray-400"><span class="text-white font-bold">1,023</span> Followers</p>
+      </div>
     </div>
     <div id="tweet-list" class="m-4">
       <div id="tweet-item" class="flex border rounded-md border-slate-600 p-4 mb-2">
