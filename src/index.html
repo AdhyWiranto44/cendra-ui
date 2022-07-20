@@ -44,9 +44,9 @@
         <i class="fa-solid fa-ellipsis lg:pr-4"></i>
         <h2 class="text-xl hidden lg:block">More</h2>
       </a>
-      <a class="text-2xl mx-4 lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 bg-sky-500 rounded-full hover:bg-sky-600" href="#" title="More">
+      <button id="sidebar-tweet-button" class="text-2xl mx-auto lg:mx-14 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-3 bg-sky-500 rounded-full hover:bg-sky-600" href="#" title="Tweet">
         <i class="fa-solid fa-pencil mx-auto"></i>
-      </a>
+      </button>
       <a class="mx-4 lg:mx-14 flex mb-4 duration-300 p-3 hover:bg-slate-700 hover:rounded-full" href="#" title="More">
         <div id="user-photo-profile" class="w-14 lg:mr-3">
           <img class="rounded-full" src="/src/img/momo.jpg" alt="momo">
@@ -124,5 +124,36 @@
       </div>
     </div>
   </div>
+
+  <div id="cendra-tweet-input-floated" class="bg-black bg-opacity-70 w-full h-full absolute z-20 hidden">
+    <div class="ml-4 mt-4">
+      <button id="tweet-exit-button" class="duration-300 p-3 rounded-full hover:bg-slate-700" title="Close">
+        <i class="fa-solid fa-x"></i>
+      </button>
+    </div>
+    <div id="cendra-tweet-input" class="border border-slate-600 p-4 rounded-md flex bg-slate-800 absolute left-2/4 -translate-x-2/4 mt-14 w-9/12 lg:w-5/12">
+      <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
+        <img class="rounded-full" src="/src/img/momo.jpg" alt="momo">
+      </div>
+      <form class="w-full">
+        <textarea class="bg-slate-800 block w-full mb-4 text-white focus:outline-none" type="text" name="tweet" placeholder="What's happening?"></textarea>
+        <button class="block bg-sky-500 duration-300 hover:bg-sky-600 px-4 py-2 rounded-full text-sky-50 font-semibold ml-auto" type="button">Tweet</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const tweetButton = document.getElementById('sidebar-tweet-button');
+    const tweetInputFloated = document.getElementById('cendra-tweet-input-floated');
+    const tweetExitButton = document.getElementById('tweet-exit-button');
+
+    tweetButton.addEventListener('click', () => {
+      tweetInputFloated.classList.remove('hidden');
+    });
+
+    tweetExitButton.addEventListener('click', () => {
+      tweetInputFloated.classList.add('hidden');
+    });
+  </script>
 </body>
 </html>
