@@ -160,92 +160,13 @@
   </div>
   <!-- End of Tweet Modal -->
 
-  <!-- Explore Modal -->
-  <div id="explore-modal" class="bg-black bg-opacity-70 w-full h-full absolute z-20 hidden">
-    <div class="ml-4 mt-4">
-      <button id="explore-modal-exit" class="duration-300 p-3 rounded-full hover:bg-slate-700" title="Close">
-        <i class="fa-solid fa-x"></i>
-      </button>
-    </div>
-    <div id="cendra-trends" class="pt-4 h-screen overflow-y-auto flex-col md:w-5/12 mx-auto">
-      <a class="mx-6 flex items-baseline justify-center lg:justify-start mb-4 duration-300 p-4 bg-slate-700 rounded-full" href="#" title="Main">
-        <i class="fa-solid fa-search text-zinc-400 pr-4"></i>
-        <input type="text" class="bg-slate-700 w-full focus:outline-none text-white" placeholder="Search Twitter">
-      </a>
-      <div class="bg-slate-700 pt-4 mx-6 mb-4 rounded-xl">
-        <h2 class="text-xl font-bold mb-4 px-4">Your Trends</h2>
-        <div id="trend-list">
-          <a href="#" id="trend-item" class="block px-4 py-2 duration-300 hover:bg-slate-600">
-            <small class="text-zinc-400">1 · Trending</small>
-            <p class="font-bold">#NINEORNONE</p>
-            <small class="text-zinc-400">180K Tweets</small>
-          </a>
-          <a href="#" id="trend-item" class="block px-4 py-2 duration-300 hover:bg-slate-600">
-            <small class="text-zinc-400">2 · Trending</small>
-            <p class="font-bold">#namjoon</p>
-            <small class="text-zinc-400">180K Tweets</small>
-          </a>
-          <a href="#" id="trend-item" class="block px-4 py-2 duration-300 hover:bg-slate-600">
-            <small class="text-zinc-400">3 · Trending</small>
-            <p class="font-bold">#nayeon_pop</p>
-            <small class="text-zinc-400">180K Tweets</small>
-          </a>
-          <a href="#" id="trend-item" class="block px-4 py-2 duration-300 hover:bg-slate-600">
-            <small class="text-zinc-400">4 · Trending</small>
-            <p class="font-bold">#inyourarea</p>
-            <small class="text-zinc-400">180K Tweets</small>
-          </a>
-          <a href="#" class="flex items-center px-4 py-2 duration-300 hover:bg-slate-600 rounded-b-xl text-sky-500">
-            Show more
-          </a>
-        </div>
-      </div>
-      <div class="bg-slate-700 pt-4 mx-6 rounded-xl mb-4">
-        <h2 class="text-xl font-bold mb-4 px-4">Who to follow</h2>
-        <div id="follow-list">
-          <a href="#" id="follow-item" class="flex items-center px-4 py-2 duration-300 hover:bg-slate-600">
-            <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
-              <img class="rounded-full" src="/src/img/tzuyu.jpg" alt="mina">
-            </div>
-            <div class="user-name">
-              <p class="font-bold">Chou Tzuyu</p>
-              <small class="block text-zinc-400">@thinkaboutzu</small>
-            </div>
-            <div id="follow-button" class="ml-auto">
-              <button class="block font-bold duration-300 bg-white hover:bg-zinc-100 active:bg-zinc-200 px-4 py-1 rounded-full" type="button">Follow</button>
-            </div>
-          </a>
-          <a href="#" id="trend-item" class="flex items-center px-4 py-2 duration-300 hover:bg-slate-600">
-            <div id="user-photo-profile" class="w-14 flex-shrink-0 mr-3">
-              <img class="rounded-full" src="/src/img/nayeon.jpg" alt="mina">
-            </div>
-            <div class="user-name">
-              <p class="font-bold">Im Nayeon</p>
-              <small class="block text-zinc-400">@nayeonyny</small>
-            </div>
-            <div id="follow-button" class="ml-auto">
-              <button class="block font-bold duration-300 bg-white hover:bg-zinc-100 active:bg-zinc-200 px-4 py-1 rounded-full" type="button">Follow</button>
-            </div>
-          </a>
-          <a href="#" class="flex items-center px-4 py-2 duration-300 hover:bg-slate-600 rounded-b-xl text-sky-500">
-            Show more
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End of Explore Modal -->
-
   <script>
     const tweetModal = document.getElementById('tweet-modal');
     const tweetModalExit = document.getElementById('tweet-modal-exit');
     const tweetSidebarButton = document.getElementById('tweet-sidebar-button');
-    const tweetInput = document.getElementById('tweet-component').getElementsByTagName('textarea')[0];
     const tweetInputFloated = tweetModal.getElementsByTagName('textarea')[0];
-    
-    const exploreModal = document.getElementById('explore-modal');
+
     const exploreButton = document.getElementById('explore');
-    const exploreModalExit = document.getElementById('explore-modal-exit');
 
     const searchButton = document.getElementById('search-button');
 
@@ -256,25 +177,13 @@
     tweetModalExit.addEventListener('click', () => {
       tweetModal.classList.add('hidden');
     });
-
-    tweetInput.addEventListener('focus', () => {
-      tweetInput.classList.add('border-b-2');
-    });
     
     tweetInputFloated.addEventListener('focus', () => {
       tweetInputFloated.classList.add('border-b-2');
     });
 
     exploreButton.addEventListener('click', () => {
-      if (window.innerWidth < 1024) {
-        exploreModal.classList.remove('hidden');
-      } else {
-        searchButton.focus();
-      }
-    });
-    
-    exploreModalExit.addEventListener('click', () => {
-      exploreModal.classList.add('hidden');
+      searchButton.focus();
     });
 
   </script>
